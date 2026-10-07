@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Календарь матчей</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="nav">
+<a href="index.html"><img src="images/logo.png" width="50" height="50" alt="Логотип команды, переход на главную"></a>
+<a href="index.html">Главная</a> |
+<a href="team.html">Состав</a> |
+<a href="schedule.html" class="active">Календарь</a> |
+<a href="history.html">История</a> |
+<a href="gallery.html">Галерея</a> |
+<a href="contacts.html">Контакты</a> |
+<a href="contacts.html#order">Заказ атрибутики</a> |
+<a href="https://www.fhr.ru" target="_blank">Федерация хоккея России</a> |
+<a href="https://ru.wikipedia.org/wiki/Хоккей_с_шайбой" target="_blank">Википедия: хоккей</a>
+</div>
+<div class="nav2">
+Задания JS: 
+<a href="passport.html">Считываем данные из DOM</a> |
+<a href="passport_latin.html">Кириллица в латиницу</a> |
+<a href="task.html">Алгоритмическая задача</a>
+</div>
+<div id="content">
+
+<h1 id="top">Календарь матчей</h1>
+
+<div class="local">
+Разделы страницы:
+<a href="#games">Матчи сезона</a> |
+<a href="#visit">Как попасть на матч</a> |
+<a href="#top">К началу</a>
+</div>
+
+<h2 id="games">Матчи сезона</h2>
+
+<!-- фоновое изображение для всей таблицы -->
+<table class="match" border="1" width="100%" background="images/ice_bg.png" style="background-image: url(images/ice_bg.png)">
+<tr>
+    <th style="background-image: url(images/cell_bg.png)">Дата</th>
+    <th>Соперник</th>
+    <th>Место</th>
+    <th>Счёт</th>
+    <th>Ссылка</th>
+</tr>
+<tr>
+    <td>10.10.2026</td>
+    <td><img src="images/opp1.png" width="30" height="30" alt="Логотип соперника"> Команда А</td>
+    <td>Наша арена</td>
+    <td>5:3</td>
+    <td><a href="history.html">Подробнее</a></td>
+</tr>
+<tr>
+    <td>24.10.2026</td>
+    <td><img src="images/opp2.png" width="30" height="30" alt="Логотип соперника"> Команда Б</td>
+    <td>Арена соперника</td>
+    <td>2:4</td>
+    <td><a href="https://www.fhr.ru" target="_blank">Сайт федерации</a></td>
+</tr>
+<tr>
+    <td>07.11.2026</td>
+    <td><img src="images/opp3.png" width="30" height="30" alt="Логотип соперника"> Команда В</td>
+    <td>Наша арена</td>
+    <td>будет сыгран</td>
+    <td><a href="#visit">Как попасть</a></td>
+</tr>
+<tr>
+    <td colspan="5">
+    <!-- картинка-ссылка: миниатюра ведёт в галерею -->
+    <a href="gallery.html"><img src="images/small1.png" width="100" alt="Фото с игры"></a>
+    Фото с игры, больше снимков в <a href="gallery.html">Галерее</a>
+    </td>
+</tr>
+</table>
+<a href="#top">К началу</a>
+
+<h2 id="visit">Как попасть на матч</h2>
+<ol>
+<li>Придите на арену за 30 минут до начала.</li>
+<li>Покажите студенческий билет на входе.</li>
+<li>Займите место на трибуне.</li>
+<li>Поддерживайте команду!</li>
+</ol>
+<a href="#top">К началу</a>
+<hr>
+<div id="footer">Хоккейная Команда НИУ ВШЭ СПБ «Северный ворон», 2026 год</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* Общий файл стилей для всех страниц */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f4f8fc;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+h1, h2 {
+    color: #1a3a6b;
+}
+
+/* навигация */
+.nav {
+    background-color: #1a3a6b;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* ссылка текущей страницы */
+.nav a.active {
+    background-color: #ffcc00;
+    color: #1a3a6b;
+    font-weight: bold;
+}
+
+.nav img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.nav2 {
+    background-color: #2c5aa0;
+    padding: 6px;
+    text-align: center;
+    color: white;
+}
+
+.nav2 a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+.nav2 a.active {
+    background-color: #ffcc00;
+    color: #1a3a6b;
+    font-weight: bold;
+}
+
+/* навигация внутри страницы */
+.local {
+    background-color: #e3edf8;
+    padding: 8px;
+}
+
+/* таблицы */
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+}
+
+.match td, .match th {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #1a3a6b;
+}
+
+.photos td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.photos img {
+    border: 2px solid #1a3a6b;
+}
+
+/* формы */
+form {
+    background-color: #eef4fb;
+    border: 1px solid #1a3a6b;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+input[type=submit], button {
+    background-color: #1a3a6b;
+    color: white;
+    border: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.result {
+    background-color: #fff8d6;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#footer {
+    text-align: center;
+    color: #555555;
+    font-size: 14px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Контакты и формы</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="nav">
+<a href="index.html"><img src="images/logo.png" width="50" height="50" alt="Логотип команды, переход на главную"></a>
+<a href="index.html">Главная</a> |
+<a href="team.html">Состав</a> |
+<a href="schedule.html">Календарь</a> |
+<a href="history.html">История</a> |
+<a href="gallery.html">Галерея</a> |
+<a href="contacts.html" class="active">Контакты</a> |
+<a href="contacts.html#order">Заказ атрибутики</a> |
+<a href="https://www.fhr.ru" target="_blank">Федерация хоккея России</a> |
+<a href="https://ru.wikipedia.org/wiki/Хоккей_с_шайбой" target="_blank">Википедия: хоккей</a>
+</div>
+<div class="nav2">
+Задания JS: 
+<a href="passport.html">Считываем данные из DOM</a> |
+<a href="passport_latin.html">Кириллица в латиницу</a> |
+<a href="task.html">Алгоритмическая задача</a>
+</div>
+<div id="content">
+
+<h1 id="top">Контакты и формы</h1>
+
+<div class="local">
+Разделы страницы:
+<a href="#contacts">Связаться с нами</a> |
+<a href="#order">Заказ атрибутики</a> |
+<a href="#top">К началу</a>
+</div>
+
+<h2 id="contacts">Связаться с нами</h2>
+<form action="https://httpbin.org/post" method="post">
+    <input type="hidden" name="form_name" value="contacts">
+
+    Фамилия:<br>
+    <input type="text" name="surname" required><br><br>
+
+    Имя:<br>
+    <input type="text" name="first_name" required><br><br>
+
+    Группа:<br>
+    <input type="text" name="group_name" required><br><br>
+
+    Мобильный телефон:<br>
+    <input type="tel" name="phone" placeholder="+7 900 000-00-00" required><br><br>
+
+    Электронная почта:<br>
+    <input type="email" name="email" required><br><br>
+
+    Дата отправки сообщения:<br>
+    <input type="date" name="send_date" id="send_date"><br><br>
+
+    <input type="submit" value="Отправить">
+</form>
+<a href="#top">К началу</a>
+
+<h2 id="order">Заказ атрибутики</h2>
+<form action="https://httpbin.org/post" method="post">
+    <!-- скрытые поля, значения по умолчанию уходят на сервер -->
+    <input type="hidden" name="team" value="Хоккейная команда вуза">
+    <input type="hidden" name="season" value="2026/2027">
+
+    Фамилия и имя заказчика:<br>
+    <input type="text" name="customer_name" required><br><br>
+
+    Товар:<br>
+    <select name="item">
+        <option value="jersey">Игровой свитер</option>
+        <option value="scarf">Шарф болельщика</option>
+        <option value="cap">Кепка</option>
+    </select><br><br>
+
+    Количество:<br>
+    <input type="number" name="quantity" value="1" min="1" max="10"><br><br>
+
+    Размер:<br>
+    <input type="radio" name="size" value="S"> S
+    <input type="radio" name="size" value="M" checked> M
+    <input type="radio" name="size" value="L"> L
+    <input type="radio" name="size" value="XL"> XL<br><br>
+
+    Дополнительно:<br>
+    <input type="checkbox" name="extra" value="name_print"> Именная нашивка<br>
+    <input type="checkbox" name="extra" value="number_print"> Номер на спине<br>
+    <input type="checkbox" name="extra" value="gift_pack"> Подарочная упаковка<br><br>
+
+    Желаемая дата получения:<br>
+    <input type="date" name="wanted_date"><br><br>
+
+    Пароль для проверки статуса заказа:<br>
+    <input type="password" name="order_password" required><br><br>
+
+    Комментарий:<br>
+    <textarea name="comment" rows="3" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Отправить заказ">
+</form>
+<a href="#top">К началу</a>
+<hr>
+<div id="footer">Хоккейная Команда НИУ ВШЭ СПБ «Северный ворон», 2026 год</div>
+</div>
+<script>
+// подставляем сегодняшнюю дату в поле "Дата отправки"
+var today = new Date();
+var year = today.getFullYear();
+var month = String(today.getMonth() + 1).padStart(2, "0");
+var day = String(today.getDate()).padStart(2, "0");
+document.getElementById("send_date").value = year + "-" + month + "-" + day;
+</script>
+</body>
+</html>
