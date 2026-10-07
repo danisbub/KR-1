@@ -32,7 +32,7 @@
 <p>Серия и номер: <span>0000 000000</span></p>
 <p>Фамилия: <span id="surname">Бузыкаев</span></p>
 <p>Имя: <span id="firstname">Данис</span></p>
-<p>Отчество: <span>Александрович</span></p>
+<p>Отчество: <span id="patronymic">Александрович</span></p>
 <p>Пол: <span>мужской</span></p>
 <p>Дата рождения: <span>15.03.</span><span id="year">2006</span></p>
 <p>Место рождения: <span>г. Казань</span></p>
@@ -53,6 +53,7 @@
 function toLatin() {
     document.getElementById("surname").innerText = "Buzykaev";
     document.getElementById("firstname").innerText = "Danis";
+    document.getElementById("patronymic").innerText = "Aleksandrovich";
     // год рождения римскими цифрами (2006 = MMVI)
     document.getElementById("year").innerText = "MMVI";
 }
@@ -60,6 +61,7 @@ function toLatin() {
 function toCyrillic() {
     document.getElementById("surname").innerText = "Бузыкаев";
     document.getElementById("firstname").innerText = "Данис";
+    document.getElementById("patronymic").innerText = "Александрович";
     document.getElementById("year").innerText = "2006";
 }
 </script>
