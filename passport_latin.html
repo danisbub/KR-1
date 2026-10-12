@@ -28,32 +28,38 @@
 
 <h1>Изменяем кириллицу на латиницу по клику</h1>
 
-<h2>Страница 2</h2>
-<p>Серия и номер: <span>0000 000000</span></p>
-<p>Фамилия: <span id="surname">Бузыкаев</span></p>
-<p>Имя: <span id="firstname">Данис</span></p>
-<p>Отчество: <span id="patronymic">Александрович</span></p>
-<p>Пол: <span>мужской</span></p>
-<p>Дата рождения: <span>15.03.</span><span id="year">2006</span></p>
-<p>Место рождения: <span>г. Казань</span></p>
-
-<h2>Страница 3</h2>
-<p>Зарегистрирован по адресу: <span>г. Санкт-Петербург, ул. Примерная, д. 1, кв. 1</span></p>
-<p>Дата регистрации: <span>01.09.2024</span></p>
-
-<hr>
 <button onclick="toLatin()">Заменить на латиницу</button>
 <button onclick="toCyrillic()">Вернуть кириллицу</button>
+
+<!-- картинка паспорта, поверх неё текст с данными -->
+<div class="passport">
+    <img src="images/passport.png" width="522" height="731" alt="Вторая и третья страницы паспорта">
+    <img class="photo" src="images/photo.jpg" alt="Фотография владельца">
+
+    <div class="f" style="left: 106px; top: 75px;">Отделом УФМС России по респ. Татарстан</div>
+    <div class="f" style="left: 44px; top: 104px;">в Вахитовском районе г. Казани</div>
+    <div class="f" style="left: 96px; top: 160px;">20.03.2020</div>
+    <div class="f" style="left: 288px; top: 160px;">160-001</div>
+
+    <div class="f" style="left: 218px; top: 409px;" id="surname">Бузыкаев</div>
+    <div class="f" style="left: 202px; top: 464px;" id="firstname">Данис</div>
+    <div class="f" style="left: 216px; top: 492px;" id="patronymic">Александрович</div>
+    <div class="f" style="left: 198px; top: 519px;" id="gender">муж.</div>
+    <div class="f" style="left: 300px; top: 519px;"><span>15.03.</span><span id="year">2006</span></div>
+    <div class="f" style="left: 234px; top: 546px;" id="birthplace">г. Казань</div>
+</div>
 <hr>
 <div id="footer">Хоккейная Команда НИУ ВШЭ СПБ «Северный ворон», 2026 год</div>
 </div>
 <script>
-// ВАЖНО: поменяйте значения на свои фамилию, имя и год рождения
+// Меняем фамилию, имя, отчество, пол, место и год рождения прямо на картинке паспорта
 
 function toLatin() {
     document.getElementById("surname").innerText = "Buzykaev";
     document.getElementById("firstname").innerText = "Danis";
     document.getElementById("patronymic").innerText = "Aleksandrovich";
+    document.getElementById("gender").innerText = "male";
+    document.getElementById("birthplace").innerText = "Kazan";
     // год рождения римскими цифрами (2006 = MMVI)
     document.getElementById("year").innerText = "MMVI";
 }
@@ -62,6 +68,8 @@ function toCyrillic() {
     document.getElementById("surname").innerText = "Бузыкаев";
     document.getElementById("firstname").innerText = "Данис";
     document.getElementById("patronymic").innerText = "Александрович";
+    document.getElementById("gender").innerText = "муж.";
+    document.getElementById("birthplace").innerText = "г. Казань";
     document.getElementById("year").innerText = "2006";
 }
 </script>

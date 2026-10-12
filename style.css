@@ -122,3 +122,35 @@ input[type=submit], button {
     color: #555555;
     font-size: 14px;
 }
+
+/* паспорт: текст поверх картинки */
+.passport {
+    position: relative;
+    width: 522px;
+    height: 731px;
+    margin: 20px auto;
+}
+
+.passport img {
+    display: block;
+}
+
+.passport .f {
+    position: absolute;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1b2a6b;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* фотография в окошке паспорта */
+.passport .photo {
+    position: absolute;
+    left: 24px;
+    top: 449px;
+    width: 144px;
+    height: 168px;
+    object-fit: cover;
+}
