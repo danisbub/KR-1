@@ -63,7 +63,6 @@
 
 <h2 id="order">Заказ атрибутики</h2>
 <form action="https://httpbin.org/post" method="post">
-    <!-- скрытые поля, значения по умолчанию уходят на сервер -->
     <input type="hidden" name="team" value="Хоккейная команда вуза">
     <input type="hidden" name="season" value="2026/2027">
 
@@ -107,7 +106,6 @@
 <div id="footer">Хоккейная Команда НИУ ВШЭ СПБ «Северный ворон», 2026 год</div>
 </div>
 <script>
-// подставляем сегодняшнюю дату в поле "Дата отправки"
 var today = new Date();
 var year = today.getFullYear();
 var month = String(today.getMonth() + 1).padStart(2, "0");
