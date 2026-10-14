@@ -32,8 +32,16 @@
   <input type="number" id="a">
   <br><br>
   <button onclick="proverit()">Проверить</button>
+  <button onclick="otpravit()">Отправить</button>
   <h2 id="otvet"></h2>
   
+
+  <h3 id="otpravka"></h3>
+  <form action="https://httpbin.org/post" method="post" id="UserEnter" target="_blank">
+    <input type="hidden" name="d" id="formD">
+    <input type="hidden" name="a" id="formA">
+    <input type="hidden" name="result" id="formOtvet">
+  </form>
 <hr>
 <div id="footer">Хоккейная Команда НИУ ВШЭ СПБ «Северный ворон», 2026 год</div>
 </div>
@@ -55,6 +63,23 @@
         document.getElementById("otvet").innerHTML = "Да";
       } else {
         document.getElementById("otvet").innerHTML = "Нет";
+      }
+    }
+  
+    // Отправляем данные на сервер, только если брус выпилить можно
+    function otpravit() {
+      proverit();
+      var otvet = document.getElementById("otvet").innerHTML;
+      if (otvet === "Да") {
+        document.getElementById("formD").value = document.getElementById("d").value;
+        document.getElementById("formA").value = document.getElementById("a").value;
+        document.getElementById("formOtvet").value = otvet;
+        document.getElementById("UserEnter").submit();
+        document.getElementById("otpravka").innerHTML = "Данные отправлены на сервер";
+      } else if (otvet === "Нет") {
+        document.getElementById("otpravka").innerHTML = "Брус выпилить нельзя, данные не отправляются";
+      } else {
+        document.getElementById("otpravka").innerHTML = "Данные не отправлены";
       }
     }
   </script>
