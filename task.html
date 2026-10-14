@@ -65,15 +65,19 @@
         document.getElementById("otvet").innerHTML = "Нет";
       }
     }
+  
+    // Отправляем данные на сервер, только если брус выпилить можно
     function otpravit() {
       proverit();
       var otvet = document.getElementById("otvet").innerHTML;
-      if (otvet === "Да" || otvet === "Нет") {
+      if (otvet === "Да") {
         document.getElementById("formD").value = document.getElementById("d").value;
         document.getElementById("formA").value = document.getElementById("a").value;
         document.getElementById("formOtvet").value = otvet;
         document.getElementById("UserEnter").submit();
         document.getElementById("otpravka").innerHTML = "Данные отправлены на сервер";
+      } else if (otvet === "Нет") {
+        document.getElementById("otpravka").innerHTML = "Брус выпилить нельзя, данные не отправляются";
       } else {
         document.getElementById("otpravka").innerHTML = "Данные не отправлены: проверьте введённые числа";
       }
