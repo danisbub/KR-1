@@ -1,3 +1,4 @@
+/* Общий файл стилей для всех страниц */
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -17,6 +18,7 @@ h1, h2 {
     color: #1a3a6b;
 }
 
+/* навигация */
 .nav {
     background-color: #1a3a6b;
     padding: 10px;
@@ -33,6 +35,7 @@ h1, h2 {
     text-decoration: underline;
 }
 
+/* ссылка текущей страницы */
 .nav a.active {
     background-color: #ffcc00;
     color: #1a3a6b;
@@ -63,11 +66,13 @@ h1, h2 {
     font-weight: bold;
 }
 
+/* навигация внутри страницы */
 .local {
     background-color: #e3edf8;
     padding: 8px;
 }
 
+/* таблицы */
 table {
     border-collapse: collapse;
 }
@@ -90,6 +95,7 @@ td, th {
     border: 2px solid #1a3a6b;
 }
 
+/* формы */
 form {
     background-color: #eef4fb;
     border: 1px solid #1a3a6b;
@@ -116,6 +122,8 @@ input[type=submit], button {
     color: #555555;
     font-size: 14px;
 }
+
+/* паспорт: текст поверх картинки */
 .passport {
     position: relative;
     width: 522px;
@@ -137,6 +145,7 @@ input[type=submit], button {
     white-space: nowrap;
 }
 
+/* фотография в окошке паспорта */
 .passport .photo {
     position: absolute;
     left: 24px;
@@ -144,4 +153,14 @@ input[type=submit], button {
     width: 144px;
     height: 168px;
     object-fit: cover;
+}
+
+/* страницы с большими фотографиями: фото по центру */
+.bigphoto {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bigphoto img {
+    border: 2px solid #1a3a6b;
 }
